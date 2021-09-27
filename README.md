@@ -1,40 +1,6 @@
 
 
 
-# Tabela de conteúdos
-1. [A aplicação](#a-aplicação)
-2. [Scripts](#scripts) 
-	-  [yarn start](#yarn-start)
-	-  [yarn build](#yarn-build)
-	-  [yarn eject](#yarn-eject)
-	-  [yarn predeploy](#yarn-predeploy)
-	-  [yarn deploy](#yarn-deploy)
-	-  [yarn test](#yarn-test)
-3. [Como executar localmente](#como-executar-localmente)
-4. [Informações adicionais sobre as dependências da aplicação](#informações-adicionais-sobre-as-dependências-da-aplicação)
-5. [Informações adicionais sobre as funcionalidades da aplicação](#informações-adicionais-sobre-as-funcionalidades-da-aplicação)
-	- [Navegação entre telas](#navegação-entre-telas)
-	- [Endpoints utilizados](#endpoints-utilizados)
-	- [Paginação das listas](#paginação-das-listas)
-	- [Resultados da busca](#resultados-da-busca)
-	- [Ordenação da lista de repositórios](#ordenação-da-lista-de-repositórios)
-	- [Tratamento de erros](#tratamento-de-erros)
-	- [Página não encontrada](#página-não-encontrada)
-6. [Testes](#testes)
-
-## A aplicação 
-
-O Github Lite é um projeto criado utilizando a api pública do GitHub e pode ser acessado clicando [aqui](https://guilhermemcardoso.github.io/github-lite/).
-A aplicação é uma web application criada utilizando o [ReactJS](https://reactjs.org/) e é composta pelas seguintes páginas:
-
- - **Search, que é a página inicial da aplicação:** nela é possível pesquisar por usuários do GitHub através de um campo de texto. Os resultados são exibidos em uma lista, que possui paginação e exibe, no máximo, 10 itens por vez. Ao clicar na imagem, nome ou login do usuário listado, a aplicação é redirecionada para a outra página, a página de usuário.
- 
-	Para acessar a página de buscas, basta utilizar o endereço [https://guilhermemcardoso.github.io/github-lite/](https://guilhermemcardoso.github.io/github-lite/).
- - **User:** esta é a página de usuário e nela podemos encontrar informações sobre o usuário, como empresa que trabalha, localização e lista de repositórios, além das informações que já são exibidas nos resultados de busca, como nome, login, foto de perfil e bio (as quantidades de "seguindo" e seguidores são exibidas apenas na lista de resultados da busca). A lista de repositórios também possui paginação e exibe, no máximo, 30 repositórios por vez. Cada item da lista de repositórios é composto por nome do repositório, descrição e número de estrelas. Ao clicar no nome do repositório (em azul), um modal será exibido com as informações do item da lista, além de exibir também a linguagem utilizada no repositório e um link que abre, em uma nova aba do browser, a página do repositório selecionado no GitHub
-
-	Para acessar a página de algum usuário, basta utilizar o endereço [https://guilhermemcardoso.github.io/github-lite/users/[nome_usuario]](https://guilhermemcardoso.github.io/github-lite/users/), substituindo `[nome_usuario]` pelo nome de usuário (login) do usuário que deseja visualizar.
-
-A aplicação é simples, porém responsiva. E seu visual é baseado no visual do site do próprio GitHub.
 
 
 ## Scripts
@@ -69,15 +35,7 @@ Inicializa o menu para execução dos testes da aplicação. Após abrir o menu,
 
 ## Como executar localmente
 
- 1. Clonar o repositório
-
-Para executar a aplicação localmente, alterar arquivos e desenvolver novas funcionalidades, é preciso, primeiramente, clonar o projeto para seu computador. Para isso, execute o seguinte comando em seu terminal:
-
-`git clone git@github.com:guilhermemcardoso/github-lite.git`
-
-> Ou então `git clone https://github.com/guilhermemcardoso/github-lite.git`, caso não possua chave SSH configurada.
-
- 2. Instalar as dependências
+ 1. Instalar as dependências
 
 Para instalar as dependências do projeto, acesse o diretório do projeto e digite o comando:
 
@@ -110,8 +68,6 @@ Para desenvolver o projeto, foram utilizadas outras bibliotecas interessantes qu
 
 A aplicação utiliza o `BrowserRouter` da biblioteca `react-router` para realizar a navegação entre telas. Porém, a aplicação está hospedada no GitHub pages e é acessada através do endereço do meu GitHub, dentro de uma subpasta, github-lite. Por isso, toda a navegação da aplicação possui como base o caminho `/github-lite/` e não somente `/`.
 
-#### OBS: O GitHub pages tem (aparentemente) algumas incompatibilidades com o BrowserRouter e, por isso, não é possível acessar uma URL com parâmetros diretamente pela barra de endereços do browser. 
-#### Ex: [https://guilhermemcardoso.github.io/github-lite/users/guilhermemcardoso](https://guilhermemcardoso.github.io/github-lite/users/guilhermemcardoso) - porém, se procurarmos por este usuário na página de buscas ([https://guilhermemcardoso.github.io/github-lite/](https://guilhermemcardoso.github.io/github-lite/)) e selecionarmos o usuário, a página abrirá normalmente.
 
 ### Endpoints utilizados
 
